@@ -13,15 +13,19 @@
 }
 .PlayFair-bold() {
   font-family: 'Playfair Display', serif;
-  font-weight: bold;
+  font-weight: bolder;
 }
 @white-color : #f8f6f4;
 @main-color: #c0a064;
 @second-color: #6c6a68;
 @black-color: #2c2a28;
-* {
+*,*:before, *:after {
+  box-sizing: border-box;
   margin:0;
   padding:0;
+}
+html {
+  scroll-behavior: smooth;
 }
 // Wrapper for page
 .wrapper {
@@ -108,19 +112,246 @@
       }
       // header-button, styles for button on header
       .header-content-button{
-        margin-top: 10vh;
-        .discover {
-          font-size: 18px;
-          .lato-bold();
+        text-transform: uppercase;
+        width: 130px;
+        height: 65px;
+        text-align: center;
+        line-height: 65px;
+        margin: 8vh auto;
+        position: relative;
+        cursor: pointer;
+        a {
           color: @main-color;
-          padding:2vh 8vh;
-          outline: none;
-          border: 2px solid @main-color;
-          background-color: rgba(1,1,1,0.0);
-          }
+          .lato-bold();
+          text-decoration: none;
         }
+        // header BUTTON SVG styles
+        svg {
+          position: absolute;
+          top:0;
+          left:0;
+        & rect {
+        stroke : @main-color;
+          stroke-width: 1;
+          transition: 0.9s;
+          stroke-dasharray: 400,0;
+        }
+        }
+        //header-button hover effect on header button
+        &:hover {
+        svg rect {
+          stroke-width: 8;
+          stroke-dasharray: 35,245;
+          stroke-dashoffset: 40;
+         }
+        }
+      }
     }
   }
 }
+// Recent works styles ||
+.recent {
+  padding-top:10vh;
+  padding-bottom: 10vh;
+  width:100%;
+  overflow: hidden;
+  background-color: @white-color;
+  // Recent works TITLE styles ||
+  .recent-title {
+
+    text-align:center;
+    padding:7vh;
+    h2 {
+      font-size: 46px;
+      .PlayFair-bold();
+    }
+  }
+  // recent works CARDS styles ||
+  .recent-content-cards {
+    display:flex;
+    flex-flow:wrap;
+    justify-content: center;
+  // recent works MIDDLE CARD STYLES ||
+    .recent-content-middle-card {
+      width:770px;
+      height:770px;
+      display: flex;
+      margin-right: 3vh;
+    }
+    // recent works SMALLS CARD_2 STYLES ||
+    .recent-content-smalls-card_02 {
+      margin-top: 3vh;
+    }
+    .recent-content-smalls-card , .recent-content-smalls-card_02{
+      width:370px;
+      height: 370px;
+    }
+    // recent works BIGGEST CARD STYLES ||
+    .recent-content-biggest-card {
+      margin-top: 3vh;
+
+    }
+  }
+}
+
+// collection styles ||!!
+.collections {
+  padding: 10vh;
+  display: flex;
+  //collection title styles ||
+  .collections-title {
+    padding: 5vh;
+    text-align: center;
+
+    h2 {
+      font-size: 46px;
+      .PlayFair-bold();
+    }
+  }
+
+  // collection items styles \\
+  .collection-items {
+    display: flex;
+    flex-direction: column;
+    // collection items ITEM styles \\ ||
+    .collection-item {
+      display: flex;
+
+      .collection-item-image {
+        width: 600px;
+        height: 400px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      // collection ITEMS ITEM CONTENT styles |||
+      .collection-item-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 5vh;
+        max-width: 600px;
+
+        h2 {
+          .PlayFair-bold();
+          font-size: 36px;
+        }
+
+        p {
+          color: @black-color .lato-light();
+          font-size: 18px;
+          margin-top: 2vh;
+        }
+
+        // collection ITEM CONTENT BUTTON STYLES
+        .collection-item-content-button {
+          text-transform: uppercase;
+          width: 160px;
+          height: 65px;
+          text-align: center;
+          line-height: 65px;
+          margin-top: 3vh;
+          position: relative;
+          cursor: pointer;
+
+          a {
+            color: @main-color;
+            .lato-bold();
+            text-decoration: none;
+          }
+
+          // COLLECTION BUTTON SVG styles
+          svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            & rect {
+              stroke: @main-color;
+              stroke-width: 1;
+              transition: 0.9s;
+              stroke-dasharray: 800, 0;
+            }
+          }
+
+          //header-button hover effect on header button
+          &:hover {
+            svg rect {
+              stroke-width: 8;
+              stroke-dasharray: 40, 295;
+              stroke-dashoffset: 55;
+            }
+          }
+        }
+      }
+
+      &:nth-child(even) {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+.contact {
+  height:40vh;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin:10vh;
+
+  .contact-form {
+    margin-top: 4vh;
+    input {
+      width:400px;
+      height:40px;
+      border:1px solid @black-color;
+      padding:2vh;
+    }
+    textarea {
+      border: 1px solid @black-color;
+      padding:2vh;
+      width:400px;
+      height:180px;
+    }
+    button{
+      padding:1vh 140px;
+      outline:none;
+      border: 2px solid @main-color;
+      background-color: rgba(1,1,1,0);
+      color:@main-color;
+      text-transform: uppercase;
+      .lato-bold();
+      font-size: 18px;
+    }
+  }
+  .contact-footer {
+    margin-top: 3vh;
+    text-align:center;
+    .contact-footer-text {
+      margin-top: 3vh;
+      p {
+        .lato-light();
+        font-size: 18px;
+        color:@black-color;
+      }
+    }
+    .contact-footer-socIcon{
+      margin-top: 3vh;
+      display:flex;
+      width:200px;
+      justify-content: space-around;
+      padding-bottom: 20vh;
+      img {
+        display:flex;
+        color:@black-color;
+      }
+    }
+  }
+
+}
+
 
 

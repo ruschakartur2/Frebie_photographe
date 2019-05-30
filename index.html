@@ -11,14 +11,14 @@
 </head>
 <body>
 
-    <div class="header">
+    <div class="header" id="home">
         <div class="bg">
             <div class="wrapper">
                 <div class="navBar">
                     <div class="navBar-navs">
-                        <div class="navBar-nav"><a href="" class="active">Головна</a></div>
-                        <div class="navBar-nav"><a href="">Галарея</a></div>
-                        <div class="navBar-nav"><a href="">Контакти</a></div>
+                        <div class="navBar-nav"><a href="#home" class="active">Головна</a></div>
+                        <div class="navBar-nav"><a href="#recent">Галарея</a></div>
+                        <div class="navBar-nav"><a href="#contact">Контакти</a></div>
                  </div>
                 <div class="logo">
                 <img src="assets/images/logo.png" alt="" width="30">
@@ -36,26 +36,140 @@
                         <h3>Professional photograph</h3>
                    </div>
                     <div class="header-content-button">
-                        <button class="discover">DISCOVER</button>
+                        <a href="#collections"> Відкрити
+                        <svg width="130" height="65" viewBox="0 0 130 65" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" fill="none" width="130" height="65"></rect>
+                        </svg>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="recent">
+    <div class="recent" >
         <div class="wrapper">
-            
+            <div class="recent-title" id="recent">
+                <h2>Останні роботи</h2>
+            </div>
+            <div class="recent-content">
+                <div class="recent-content-cards">
+                    <div class="recent-content-middle-card">
+                        <img src="assets/images/middle_image.png" alt="">
+                    </div>
+                    <div class="recent-content-smalls-cards">
+                        <div class="recent-content-smalls-card">
+                        <img src="assets/images/small_image_01.png" alt="">
+                        </div>
+                        <div class="recent-content-smalls-card_02">
+                        <img src="assets/images/small_image_02.png" alt="">
+                        </div>
+                    </div>
+                    <div class="recent-content-biggest-card">
+                        <img src="assets/images/biggest_image.png" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="collections"></div>
-    <div class="contact"></div>
+    <div class="collections">
+        <div class="wrapper">
+            <div class="collections-title" id="collections">
+                <h2>Мої роботи</h2>
+            </div>
+            <div class="collection-items">
+            <div class="collection-item">
+                <div class="collection-item-image">
+                    <img src="assets/images/b&w_collection_image.png" alt="">
+                </div>
+                <div class="collection-item-content">
+                    <h2>B&W Collection</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut consequuntur delectus dignissimos dolore dolorum eaque ex excepturi, illum incidunt laborum numquam omnis perspiciatis praesentium, temporibus ut.</p>
+                    <div class="collection-item-content-button">
+                        <a href=""> More
+                            <svg width="160" height="65" viewBox="0 0 160 65" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" fill="none" width="160" height="65"></rect>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="collection-item">
+                <div class="collection-item-image">
+                    <img src="assets/images/moth_earth_image.png" alt="">
+                </div>
+                <div class="collection-item-content">
+                    <h2>Mother Earth</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, necessitatibus, quod. Aspernatur dolorum ex laudantium magni nobis omnis optio quasi quisquam repellat, rerum saepe similique, sint voluptatem!</p>
+                    <div class="collection-item-content-button">
+                        <a href=""> More
+                            <svg width="160" height="65" viewBox="0 0 160 65" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" fill="none" width="160" height="65"></rect>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="collection-item">
+                <div class="collection-item-image">
+                    <img src="assets/images/portraits_image.png" alt="">
+                </div>
+                <div class="collection-item-content">
+                    <h2>Portraits</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis est iusto labore magni non omnis perspiciatis quis quisquam reprehenderit rerum! Cum in ipsam provident quas quos totam.</p>
+                    <div class="collection-item-content-button">
+                        <a href=""> More
+                            <svg width="160" height="65" viewBox="0 0 160 65" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0" y="0" fill="none" width="160" height="65"></rect>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="contact" id="contact">
+
+            <div class="contact-title">
+                <h2>Звяжіться зі мною</h2>
+            </div>
+            <div class="contact-form">
+                <form action="" id="contact-form">
+                <input type="hidden" name="project_name" value="Photograph portfolio">
+                <input type="hidden" name="admin_email" value="ruschakartur@gmail.com">
+                <input type="hidden" name="form_subject" value="contactForm">
+                <!-- END Hidden Required Fields -->
+
+                <input type="text" name="Name" placeholder="Ваше ім'я" required><br>
+                <input type="email" name="E-mail" placeholder="Ваш E-mail" required><br>
+                <textarea form="contact-form" contenteditable="false" name="Message" placeholder="Ваше повідомлення"></textarea><br>
+                <button>Відправити</button>
+                </form>
+            </div>
+            <div class="contact-footer">
+                <div class="contact-footer-text">
+                    <p>Стеж за мною</p>
+                </div>
+                <div class="contact-footer-socIcon">
+                    <img src="assets/images/instagram.png" alt="">
+                    <img src="assets/images/behance.png" alt="">
+                    <img src="assets/images/twitter.png" alt="">
+                    <img src="assets/images/facebook.png" alt="">
+                </div>
+            </div>
+
+    </div>
 
 
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+
+
 </body>
 </html>

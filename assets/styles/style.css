@@ -19,9 +19,15 @@
   font-display: swap;
   src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'), url(https://fonts.gstatic.com/s/playfairdisplay/v14/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lW4e4w.ttf) format('truetype');
 }
-* {
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+html {
+  scroll-behavior: smooth;
 }
 .wrapper {
   max-width: 1650px;
@@ -82,7 +88,7 @@
 .header .bg .header-content .header-content-text h1 {
   color: #c0a064;
   font-family: 'Playfair Display', serif;
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 60px ;
 }
 .header .bg .header-content .header-content-text h3 {
@@ -93,16 +99,211 @@
   margin-top: 4vh;
 }
 .header .bg .header-content .header-content-button {
-  margin-top: 10vh;
+  text-transform: uppercase;
+  width: 130px;
+  height: 65px;
+  text-align: center;
+  line-height: 65px;
+  margin: 8vh auto;
+  position: relative;
+  cursor: pointer;
 }
-.header .bg .header-content .header-content-button .discover {
-  font-size: 18px;
+.header .bg .header-content .header-content-button a {
+  color: #c0a064;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
+  text-decoration: none;
+}
+.header .bg .header-content .header-content-button svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.header .bg .header-content .header-content-button svg rect {
+  stroke: #c0a064;
+  stroke-width: 1;
+  transition: 0.9s;
+  stroke-dasharray: 400,0;
+}
+.header .bg .header-content .header-content-button:hover svg rect {
+  stroke-width: 8;
+  stroke-dasharray: 35,245;
+  stroke-dashoffset: 40;
+}
+.recent {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f8f6f4;
+}
+.recent .recent-title {
+  text-align: center;
+  padding: 7vh;
+}
+.recent .recent-title h2 {
+  font-size: 46px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bolder;
+}
+.recent .recent-content-cards {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+.recent .recent-content-cards .recent-content-middle-card {
+  width: 770px;
+  height: 770px;
+  display: flex;
+  margin-right: 3vh;
+}
+.recent .recent-content-cards .recent-content-smalls-card_02 {
+  margin-top: 3vh;
+}
+.recent .recent-content-cards .recent-content-smalls-card,
+.recent .recent-content-cards .recent-content-smalls-card_02 {
+  width: 370px;
+  height: 370px;
+}
+.recent .recent-content-cards .recent-content-biggest-card {
+  margin-top: 3vh;
+}
+.collections {
+  padding: 10vh;
+  display: flex;
+}
+.collections .collections-title {
+  padding: 5vh;
+  text-align: center;
+}
+.collections .collections-title h2 {
+  font-size: 46px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bolder;
+}
+.collections .collection-items {
+  display: flex;
+  flex-direction: column;
+}
+.collections .collection-items .collection-item {
+  display: flex;
+}
+.collections .collection-items .collection-item .collection-item-image {
+  width: 600px;
+  height: 400px;
+}
+.collections .collection-items .collection-item .collection-item-image img {
+  width: 100%;
+  height: 100%;
+}
+.collections .collection-items .collection-item .collection-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5vh;
+  max-width: 600px;
+}
+.collections .collection-items .collection-item .collection-item-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: bolder;
+  font-size: 36px;
+}
+.collections .collection-items .collection-item .collection-item-content p {
+  color: #2c2a28 font-family: 'Lato', sans-serif; font-weight: lighter;;
+  font-size: 18px;
+  margin-top: 2vh;
+}
+.collections .collection-items .collection-item .collection-item-content .collection-item-content-button {
+  text-transform: uppercase;
+  width: 160px;
+  height: 65px;
+  text-align: center;
+  line-height: 65px;
+  margin-top: 3vh;
+  position: relative;
+  cursor: pointer;
+}
+.collections .collection-items .collection-item .collection-item-content .collection-item-content-button a {
   color: #c0a064;
-  padding: 2vh 8vh;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+.collections .collection-items .collection-item .collection-item-content .collection-item-content-button svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.collections .collection-items .collection-item .collection-item-content .collection-item-content-button svg rect {
+  stroke: #c0a064;
+  stroke-width: 1;
+  transition: 0.9s;
+  stroke-dasharray: 800, 0;
+}
+.collections .collection-items .collection-item .collection-item-content .collection-item-content-button:hover svg rect {
+  stroke-width: 8;
+  stroke-dasharray: 40, 295;
+  stroke-dashoffset: 55;
+}
+.collections .collection-items .collection-item:nth-child(even) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.contact {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10vh;
+}
+.contact .contact-form {
+  margin-top: 4vh;
+}
+.contact .contact-form input {
+  width: 400px;
+  height: 40px;
+  border: 1px solid #2c2a28;
+  padding: 2vh;
+}
+.contact .contact-form textarea {
+  border: 1px solid #2c2a28;
+  padding: 2vh;
+  width: 400px;
+  height: 180px;
+}
+.contact .contact-form button {
+  padding: 1vh 140px;
   outline: none;
   border: 2px solid #c0a064;
   background-color: rgba(1, 1, 1, 0);
+  color: #c0a064;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+.contact .contact-footer {
+  margin-top: 3vh;
+  text-align: center;
+}
+.contact .contact-footer .contact-footer-text {
+  margin-top: 3vh;
+}
+.contact .contact-footer .contact-footer-text p {
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
+  font-size: 18px;
+  color: #2c2a28;
+}
+.contact .contact-footer .contact-footer-socIcon {
+  margin-top: 3vh;
+  display: flex;
+  width: 200px;
+  justify-content: space-around;
+  padding-bottom: 20vh;
+}
+.contact .contact-footer .contact-footer-socIcon img {
+  display: flex;
+  color: #2c2a28;
 }
 /*# sourceMappingURL=style.css.map */
