@@ -39,8 +39,7 @@
   .bg {
     width:100%;
     height:100%;
-    background-color: @white-color;
-    opacity:0.6;
+    background-color: rgba(235,235,235,0.8);
     z-index: 10;
     //Header navbar styles:
     .navBar {
@@ -59,13 +58,14 @@
             color: @second-color;
             .lato-bold();
             text-decoration: none;
+            .active {
+              color:@black-color;
+            }
           }
 
         }
         // header navs !|nav|! ACTIVE styles
-        .active {
-          color:@black-color;
-        }
+
       }
       // header navbar socialIcons(instagram, facebook, twitter, etc..) styles
       .navBar-socialIcons {
@@ -78,6 +78,47 @@
       .logo{
         margin-right:10vh;
       }
+    //end of navbar styles
+    }
+    // header-content styles
+    .header-content{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      align-content: center;
+      width:100%;
+      height: 80%;
+      // header-content styles for text (name,secondname,surname, position)
+      .header-content-text{
+        text-align:center;
+        // header-content styles for text , h1 ( name, secondname , surname)
+        h1{
+          color:@main-color;
+          .PlayFair-bold();
+          font-size:60px ;
+        }
+        // header-content styles for text, h3 ( position )
+        h3 {
+          color:@second-color;
+          .lato-light();
+          font-size:24px;
+          margin-top: 4vh;
+        }
+      }
+      // header-button, styles for button on header
+      .header-content-button{
+        margin-top: 10vh;
+        .discover {
+          font-size: 18px;
+          .lato-bold();
+          color: @main-color;
+          padding:2vh 8vh;
+          outline: none;
+          border: 2px solid @main-color;
+          background-color: rgba(1,1,1,0.0);
+          }
+        }
     }
   }
 }
