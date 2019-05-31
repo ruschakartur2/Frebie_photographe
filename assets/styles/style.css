@@ -29,6 +29,27 @@
 html {
   scroll-behavior: smooth;
 }
+.progress {
+  height: 4px;
+  width: 0;
+  background-color: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.toTop {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 7vh;
+  height: 70px;
+}
+.toTop i {
+  font-size: 48px;
+  margin: 0 auto;
+  display: none;
+}
 .wrapper {
   max-width: 1650px;
   margin: 0 auto;
@@ -281,6 +302,7 @@ html {
   font-family: 'Lato', sans-serif;
   font-weight: bold;
   font-size: 18px;
+  margin-top: 3vh;
 }
 .contact .contact-footer {
   margin-top: 3vh;
@@ -304,6 +326,5 @@ html {
 }
 .contact .contact-footer .contact-footer-socIcon img {
   display: flex;
-  color: #2c2a28;
 }
 /*# sourceMappingURL=style.css.map */

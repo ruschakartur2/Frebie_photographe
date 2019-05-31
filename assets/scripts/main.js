@@ -43,3 +43,21 @@ $(document).ready(function(){
         } // End if
     });
 });
+
+let progress = document.querySelector('.progress');
+window.addEventListener('scroll',progressBar);
+function progressBar(e){
+    let windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let per = windowScroll / windowHeight * 100;
+    progress.style.width = per + '%';
+}
+let arrow = document.querySelector('i');
+arrow.style.color = "rgba(1,1,1,0.6)";
+arrow.classList.add('wow','animated','bounceIn','fast');
+window.addEventListener('scroll',addArrow);
+function  addArrow(e) {
+    let windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    if (windowScroll > 230) arrow.style.display = "block";
+    else if(windowScroll < 230) arrow.style.display = "none";
+}

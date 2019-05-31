@@ -4,38 +4,43 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Animate library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <!-- Bootstrap CSS -->
+    <link href="assets/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles/style.css">
     <title>Freebie</title>
 </head>
 <body>
-
+    <div class="toTop"><i class="fas fa-arrow-up"></i></div>
+    <div class="progress"></div>
     <div class="header" id="home">
         <div class="bg">
             <div class="wrapper">
-                <div class="navBar">
+                <div class="navBar wow animated pulse faster">
                     <div class="navBar-navs">
                         <div class="navBar-nav"><a href="#home" class="active">Головна</a></div>
                         <div class="navBar-nav"><a href="#recent">Галарея</a></div>
                         <div class="navBar-nav"><a href="#contact">Контакти</a></div>
                  </div>
-                <div class="logo">
+                <div class="logo wow animated pulse faster">
                 <img src="assets/images/logo.png" alt="" width="30">
                 </div>
                 <div class="navBar-socialIcons">
-                    <a href=""> <img src="assets/images/instagram.png" alt=""></a>
-                    <a href=""><img src="assets/images/twitter.png" alt=""></a>
-                    <a href=""><img src="assets/images/behance.png" alt=""></a>
-                    <a href=""><img src="assets/images/facebook.png" alt=""></a>
+                    <a href="https://www.facebook.com/"><img src="assets/images/instagram.png" alt=""></a>
+                    <a href="https://www.behance.net/"> <img src="assets/images/behance.png" alt=""></a>
+                    <a href="https://twitter.com/"> <img src="assets/images/twitter.png" alt=""></a>
+                    <a href="https://www.facebook.com/"><img src="assets/images/facebook.png" alt=""></a>
                 </div>
                 </div>
                 <div class="header-content">
-                   <div class="header-content-text">
+                   <div class="header-content-text wow animated fadeIn slow">
                         <h1>Ruschak Artur Igorovich</h1>
                         <h3>Professional photograph</h3>
                    </div>
-                    <div class="header-content-button">
+                    <div class="header-content-button wow animated fadeIn slower">
                         <a href="#collections"> Відкрити
                         <svg width="130" height="65" viewBox="0 0 130 65" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0" y="0" fill="none" width="130" height="65"></rect>
@@ -48,23 +53,23 @@
     </div>
     <div class="recent" >
         <div class="wrapper">
-            <div class="recent-title" id="recent">
+            <div class="recent-title wow animated bounceInDown fast" id="recent">
                 <h2>Останні роботи</h2>
             </div>
             <div class="recent-content">
                 <div class="recent-content-cards">
-                    <div class="recent-content-middle-card">
+                    <div class="recent-content-middle-card wow animated zoomIn faster">
                         <img src="assets/images/middle_image.png" alt="">
                     </div>
                     <div class="recent-content-smalls-cards">
-                        <div class="recent-content-smalls-card">
+                        <div class="recent-content-smalls-card wow animated zoomIn faster">
                         <img src="assets/images/small_image_01.png" alt="">
                         </div>
-                        <div class="recent-content-smalls-card_02">
+                        <div class="recent-content-smalls-card_02 wow animated zoomIn faster">
                         <img src="assets/images/small_image_02.png" alt="">
                         </div>
                     </div>
-                    <div class="recent-content-biggest-card">
+                    <div class="recent-content-biggest-card wow animated zoomIn faster">
                         <img src="assets/images/biggest_image.png" alt="">
                     </div>
                 </div>
@@ -73,11 +78,11 @@
     </div>
     <div class="collections">
         <div class="wrapper">
-            <div class="collections-title" id="collections">
+            <div class="collections-title wow animated bounceInDown fast" id="collections">
                 <h2>Мої роботи</h2>
             </div>
             <div class="collection-items">
-            <div class="collection-item">
+            <div class="collection-item wow animated fadeInLeft fast">
                 <div class="collection-item-image">
                     <img src="assets/images/b&w_collection_image.png" alt="">
                 </div>
@@ -93,7 +98,7 @@
                     </div>
                 </div>
             </div>
-            <div class="collection-item">
+            <div class="collection-item wow animated fadeInRight fast">
                 <div class="collection-item-image">
                     <img src="assets/images/moth_earth_image.png" alt="">
                 </div>
@@ -109,7 +114,7 @@
                     </div>
                 </div>
             </div>
-            <div class="collection-item">
+            <div class="collection-item wow animated fadeInLeft fast">
                 <div class="collection-item-image">
                     <img src="assets/images/portraits_image.png" alt="">
                 </div>
@@ -130,19 +135,19 @@
     </div>
     <div class="contact" id="contact">
 
-            <div class="contact-title">
+            <div class="contact-title wow animated bounceInDown slow">
                 <h2>Звяжіться зі мною</h2>
             </div>
             <div class="contact-form">
-                <form action="mail.php" method="POST">
-                <input type="hidden" name="project_name" value="Photograph portfolio">
+                <form class=" wow animated jello slow">
+                <input type="hidden" name="project_name" value="Photograph portfolio" >
                 <input type="hidden" name="admin_email" value="ruschakartur@gmail.com">
                 <input type="hidden" name="form_subject" value="contactForm">
                 <!-- END Hidden Required Fields -->
 
                 <input type="text" name="Имя" placeholder="Ваше ім'я" required><br>
                 <input type="email" name="E-mail" placeholder="Ваш E-mail" required><br>
-                <input name="Сообщение" placeholder="Ваше повідомлення"><br>
+                    <textarea name="Сообщение" placeholder="Ваше повідомлення"></textarea><br>
                 <button type="submit">Відправити</button>
                 </form>
             </div>
@@ -151,10 +156,10 @@
                     <p>Стеж за мною</p>
                 </div>
                 <div class="contact-footer-socIcon">
-                    <img src="assets/images/instagram.png" alt="">
-                    <img src="assets/images/behance.png" alt="">
-                    <img src="assets/images/twitter.png" alt="">
-                    <img src="assets/images/facebook.png" alt="">
+                    <a href="https://instagram.com"> <img src="assets/images/instagram.png" alt=""></a>
+                    <a href="https://www.behance.net/"> <img src="assets/images/behance.png" alt=""></a>
+                    <a href="https://twitter.com/"> <img src="assets/images/twitter.png" alt=""></a>
+                    <a href="https://www.facebook.com/"> <img src="assets/images/facebook.png" alt=""></a>
                 </div>
             </div>
 
@@ -168,6 +173,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="https://kit.fontawesome.com/7ea8f9106c.js"></script>
     <script src="assets/scripts/main.js"></script>
 
 

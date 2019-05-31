@@ -27,6 +27,27 @@
 html {
   scroll-behavior: smooth;
 }
+.progress {
+  height:4px;
+  width:0;
+  background-color: red;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 1000;
+}
+.toTop {
+  position: fixed;
+  bottom:0;
+  right:0;
+  width:7vh;
+  height:70px;
+  i {
+    font-size: 48px;
+    margin: 0 auto;
+    display:none;
+  }
+}
 // Wrapper for page
 .wrapper {
   max-width: 1920px - (135px*2);
@@ -325,6 +346,7 @@ html {
       text-transform: uppercase;
       .lato-bold();
       font-size: 18px;
+      margin-top: 3vh;
     }
   }
   .contact-footer {
@@ -346,7 +368,6 @@ html {
       padding-bottom: 20vh;
       img {
         display:flex;
-        color:@black-color;
       }
     }
   }
